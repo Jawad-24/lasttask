@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PickAMovieForMe.com</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: url('images/movie.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .header-bg {
+      background-color: #222;
+    }
+    .text-red {
+      color: #ff4d4d;
+    }
+    .text-red:hover {
+      color: #ff3333;
+    }
+    .bg-red {
+      background-color: #ff4d4d;
+    }
+    .bg-red:hover {
+      background-color: #ff3333;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <header class="header-bg py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <h1 class="h4 font-weight-bold text-red mb-0">studee</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+      </nav>
+    </div>
+  </header>
+
+  <main class="d-flex align-items-center justify-content-center" style="height: calc(100vh - 80px);">
+    <div class="container text-center text-white position-relative">
+    <form method="post" action="/predict">
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="text" class="form-control" id="age" name="age">
+      </div>
+      <div class="form-group">
+        <label for="studyTime">Study Time Weekly</label>
+        <input type="text" class="form-control" id="studyTime" name="studyTime">
+      </div>
+      <div class="form-group">
+        <label for="absences">Absences</label>
+        <input type="text" class="form-control" id="absences" name="absences">
+      </div>
+      <div class="form-group">
+        <label for="gpa">GPA</label>
+        <input type="text" class="form-control" id="gpa" name="gpa">
+      </div>
+      <div class="form-group">
+        <label for="parentalEducation">Parental Education</label>
+        <input type="text" class="form-control" id="parentalEducation" name="parentalEducation">
+      </div>
+      <div class="form-group">
+        <label for="gradeClass">Grade Class</label>
+        <input type="text" class="form-control" id="gradeClass" name="gradeClass">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</main>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
